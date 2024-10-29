@@ -1,0 +1,26 @@
+<div class="services-container">
+    <div class="services-carousel-container">
+        <h2>Our Services</h2>
+        <div class="carousel">
+            <button class="nav-button left" (click)="prev()">&#10094;</button>
+
+            <div class="carousel-track">
+                <div class="service-card" *ngFor="let service of visibleServices">
+                    <h3>{{ service.title }}</h3>
+                    <p>{{ service.description }}</p>
+                </div>
+            </div>
+
+            <button class="nav-button right" (click)="next()">&#10095;</button>
+        </div>
+    </div>
+
+    <h2>Pricing Plans</h2>
+    <div class="pricing-container">
+        <div class="pricing-card" *ngFor="let plan of pricingPlans" [class.highlight]="selectedPlan === plan" (click)="selectPlan(plan)">
+            <h3>{{ plan.name }}</h3>
+            <p>{{ plan.description }}</p>
+            <span>{{ plan.price }}</span>
+        </div>
+    </div>
+</div>

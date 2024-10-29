@@ -1,0 +1,138 @@
+/* Navigation Bar Styling */
+
+nav {
+    background-color: #000;
+    /* Black background for a sleek, modern look */
+    padding: 10px 20px;
+    /* Add padding to give some space */
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* Subtle shadow for depth */
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: space-between;
+}
+
+.logo {
+    margin-right: 20px;
+    /* Space between logo and nav items */
+}
+
+.logo img {
+    height: 40px;
+    /* Set a height for the logo */
+    width: auto;
+    /* Maintain aspect ratio */
+}
+
+.nav-list {
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: ease, background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 30px;
+    position: relative;
+}
+
+.nav-list a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.nav-list a.active {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.language-switch {
+    align-items: right;
+    background-color: #050505;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 14px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-list li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-list,
+    .language-switch {
+        display: none;
+        flex-direction: column;
+        background-color: #000000;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    .nav-list.show,
+    .language-switch.show {
+        display: flex;
+    }
+    .nav-list li a,
+    .language-switch button {
+        padding: 10px;
+        width: 100%;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+/* Extra Small Screens */
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 100px;
+    }
+    .nav-list li a {
+        font-size: 14px;
+    }
+    .language-switch button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}

@@ -1,0 +1,31 @@
+<div class="contact-container">
+    <h2>Contact Us</h2>
+
+    <!-- Contact Information Section -->
+    <div class="contact-info">
+        <div class="info-item">
+            <h3>Phone</h3>
+            <p>+49 123 456 7890</p>
+        </div>
+        <div class="info-item">
+            <h3>Address</h3>
+            <p>123 SMM Street, Berlin, Germany</p>
+        </div>
+        <div class="info-item">
+            <h3>Email</h3>
+            <p>contactsmmagency.de</p>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <form (ngSubmit)="onSubmit()">
+            <input type="text" name="name" placeholder="Your Name" [(ngModel)]="contactForm.name" required />
+            <input type="email" name="email" placeholder="Your Email" [(ngModel)]="contactForm.email" required />
+            <input type="text" name="subject" placeholder="Subject" [(ngModel)]="contactForm.subject" required />
+            <textarea name="message" rows="4" placeholder="Your Message" [(ngModel)]="contactForm.message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>

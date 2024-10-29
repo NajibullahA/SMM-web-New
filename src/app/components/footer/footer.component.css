@@ -1,0 +1,60 @@
+/* Footer Container Styling */
+
+footer {
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(270deg, #000000, #000000);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+
+/* Gradient Animation */
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.footer-content {
+    z-index: 1;
+    position: relative;
+}
+
+.footer-social-links {
+    margin: 10px 0;
+}
+
+.footer-social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-social-links a:hover {
+    color: #e4405f;
+    /* Instagram pink color */
+}
+
+.footer-contact-info {
+    margin-top: 10px;
+    font-size: 17px;
+    color: #ffffff;
+}
